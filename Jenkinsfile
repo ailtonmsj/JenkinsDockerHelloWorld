@@ -8,9 +8,8 @@ pipeline {
 stages{
         stage('Build'){
             steps {
-            	sh "whoami"
                 sh "mvn clean package"
-                sh "docker build . -t imagename:${env.BUILD_ID}"
+                sh "docker build . -t dockerjenkinshelloworld:${env.BUILD_ID}"
             }
             post {
                 success {
