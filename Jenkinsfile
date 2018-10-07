@@ -9,7 +9,7 @@ stages{
         stage('Build'){
             steps {
                 sh "mvn clean package"
-                sh "docker build . -t imageName:${env.BUILD_ID}"
+                sh "docker build . -t imagename:${env.BUILD_ID}"
             }
             post {
                 success {
