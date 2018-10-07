@@ -8,7 +8,7 @@ pipeline {
 stages{
         stage('Build'){
             steps {
-            	sh "echo whoami"
+            	sh "whoami"
                 sh "mvn clean package"
                 sh "docker build . -t imagename:${env.BUILD_ID}"
             }
