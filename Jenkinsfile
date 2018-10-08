@@ -5,7 +5,7 @@ pipeline {
         pollSCM('* * * * *')
      }
 
-stages{
+	stages{
         stage('Build'){
             steps {
                 sh "mvn clean package"
